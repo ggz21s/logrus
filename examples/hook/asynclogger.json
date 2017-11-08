@@ -1,0 +1,13 @@
+  {
+    "filename" : "logs/async.log",
+    "maxlines" : 100000,
+    "maxsize"  : 20960000,
+    "daliy"    : true,
+    "maxdays"  : 7,
+    "rotate"   : true,
+    "level"    : 4,
+    "PrintFormat" : "[%T %s] [%L] %M",
+    "PrintToTTY"  : false,
+    "asyncbuffer" : true,
+    "buffersize"  : 819200
+  }
