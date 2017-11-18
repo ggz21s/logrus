@@ -15,7 +15,6 @@ const (
 )
 
 func Prepare(level Level, msg, pkgPath string) *LogRecord {
-
     depth, offset := 0, 0
     dest  := FileDelimiterLogger
 
