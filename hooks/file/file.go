@@ -133,7 +133,7 @@ func (w *FileLogWriter) Init(json_config string) error {
 		// 同步版本:
 		// 保留源码,不改动,默认:这里设置了日期和时间在日志中的展示,所以,配置PrintFormat时,可不用重复添加`%d %t`参考:record.go);
 		// set MuxWriter as Logger's io.Writer
-		w.Logger = log.New(w.mw, "", log.Ldate|log.Ltime)
+		w.Logger = log.New(w.mw, "", 0)//log.Ldate|log.Ltime)
 	} else {
 		// 异步缓存版本: 就不用log模块了,直接从内存刷入磁盘;
 		if w.BufferSize < 8*1024 {
